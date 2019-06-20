@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'Karmatic_Arcade';
+    src: url('../ka1.ttf')
+}
+body{
+    background-image: linear-gradient( rgb(138, 24, 24), rgb(205, 138, 39), black);
+    background-size: cover;
+}
+.contenedor{
+    background-image: url("../images/sky_sun.png" );
+}
+.contenedor div{
+    border: 3px rgb(174, 150, 73) double;
+    padding: 10px;
+}
+
+.gameboard{
+    display: flex;
+    flex-direction: row;
+} 
+.rules{
+    flex: 1;
+    font-family: 'Karmatic_Arcade';
+    color: white;
+}
+.canvasBox{
+    flex: 3;
+}
+.instructions{
+    flex: 1;
+    font-family: 'Karmatic_Arcade';
+    color: white;
+}
+.startLogo{
+    width: 150px;
+    background-position-x: center;
+}
+.logoBox{
+    background-position-x: center;
+    /*display: flex;
+    justify-content: center;*/
+}
+.buttonBox{
+    display: flex;
+    justify-content: center;
+}
+button{
+    background-color: rgb(194, 25, 25);
+    font-family: 'Karmatic_Arcade';
+    padding: 5px;
+}
+button:focus{
+    outline: none;
+}

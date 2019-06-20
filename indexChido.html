@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/styleChido.css">
+
+    </head>
+    <body>
+        <div class="contenedor">
+            <div class="logoBox">
+              <div class="Logo">
+                <img src="./images/saharaFuryLogo.png" alt="saharaFuryLogo.png" class="startLogo" >
+              </div>
+              <div class="buttonBox">
+                <button class="startGame">Start Game</button>
+              </div>
+            </div>
+            <div class="gameboard">
+                <div class="rules">
+                    <h4>Rules :</h4>
+                    <p>First one to crash, loses the game</p>
+                </div>
+                <div class="canvasBox">
+                    <canvas id="saharaFury" width="960" height="540"></canvas>
+                </div>
+                <div class="instructions">
+                    <h4>Instructions:</h4>
+                    <p>use wasd for player 1, and arrows for player 2 from the keyboard</p>
+                </div>
+            </div>
+            
+        </div>
+        <script src="./javascript/clases.js"></script>
+        <script src="./javascript/variables.js"></script>
+        <script src="./javascript/helpers.js"></script>
+        <script src="./javascript/listeners.js"></script>
+        <script type="text/javascript" src="./javascript/script.js"></script>
+    </body>
+</html>
