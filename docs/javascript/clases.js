@@ -16,7 +16,6 @@ class Board {
         if(this.x < -canvas.width){return this.x=0}
     }
     draw(){
-        
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
         ctx.drawImage(this.img, this.x + canvas.width, this.y, this.width, this.height)
     }
@@ -36,6 +35,7 @@ class PlayerUno{
     moveRight(){
         this.x+=20
         if (this.x > canvas.width - this.width) this.x = 0
+        // console.log('movimiento a la derech fuera del marco' + this.x)
     }
     moveLeft(){
         this.x-=20
@@ -49,9 +49,16 @@ class PlayerUno{
         this.y+=15
     }
     draw(){
-        ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
     }
+    isTouching(arrObstaculosMoving) {
+        return (
+            this.x < arrObstaculosMoving.x + arrObstaculosMoving.width &&
+            this.x + this.width > arrObstaculosMoving.x &&
+            this.y < arrObstaculosMoving.y + arrObstaculosMoving.height &&
+            this.y + this.height > arrObstaculosMoving.y
+    );}
 }
 class PlayerDos{
     constructor(){
@@ -72,6 +79,7 @@ class PlayerDos{
     moveLeft(){
         this.x-=20
         
+        
     }
     moveUp(){
         this.y-=15
@@ -81,7 +89,35 @@ class PlayerDos{
         this.y+=15
     }
     draw(){
+        
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+    }
+    isTouching(arrObstaculosMoving) {
+        return (
+            this.x < arrObstaculosMoving.x + arrObstaculosMoving.width &&
+            this.x + this.width > arrObstaculosMoving.x &&
+            this.y < arrObstaculosMoving.y + arrObstaculosMoving.height &&
+            this.y + this.height > arrObstaculosMoving.y
+    )}
+}
+
+class Obstacle{
+    constructor(){
+        this.x= canvas.width
+        this.y = Math.floor(Math.random() * 540)
+        this.width = 63
+        this.height = 58
+        this.img = new Image()
+        this.img.src = 'images/scrittlship.png'
+        this.img.onload = () => {
+            this.draw()
+        }
+    }
+    draw(){
         ctx.drawImage(this.img, this.x, this.y, this.width, this.height)
+        ctx.drawImage(this.img, this.x + 1000, this.y, this.width, this.height)
+    }
+    move(){
+        this.x-=2
     }
 }

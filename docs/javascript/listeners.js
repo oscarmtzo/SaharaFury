@@ -2,11 +2,11 @@ addEventListener('keydown',(e) =>{
     switch (e.keyCode){
     case 39:
         playeruno.moveRight()
-        console.log(e.keyCode)
+        
         break;
     case 37:
         playeruno.moveLeft()
-        console.log(e.keyCode)
+        
         break;
     case 38:
         playeruno.moveUp()
@@ -17,7 +17,7 @@ addEventListener('keydown',(e) =>{
     
     case 87:
         playerdos.moveUp()
-        console.log(e.keyCode)
+        
         break;
     case 83:
         playerdos.moveDown()
