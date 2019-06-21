@@ -52,7 +52,7 @@ body{
 button:focus{
     outline: none;
 }
-#playAudio{
+.playAudio{
     padding: 0;
     background: none;
 }

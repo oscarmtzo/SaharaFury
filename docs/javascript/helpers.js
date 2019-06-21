@@ -42,3 +42,9 @@ function checkCollition (){
         if(playeruno.isTouching(arrObstaculosMoving)) {return ctxGanadorDos(), gameOver()
     }else if(playerdos.isTouching(arrObstaculosMoving)){return ctxGanadorUno(),gameOver()}})
 }
+function playAudio(){
+    audio.play()
+}
+function stopAudio(){
+    audio.pause()
+}

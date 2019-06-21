@@ -28,5 +28,13 @@ addEventListener('keydown',(e) =>{
     case 68:
         playerdos.moveRight()
         break;
+    case 32:
+        clearInterval(interval)
+        interval = 0
     }
+})
+audioButton.addEventListener('click', function (){
+    if (!audioOn)playAudio()
+    else stopAudio()
+    audioOn = !audioOn
 })

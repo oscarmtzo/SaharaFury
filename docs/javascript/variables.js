@@ -1,7 +1,11 @@
 const canvas =  document.getElementById('saharaFury')
 const ctx = canvas.getContext('2d')
+let buttonStartGame = document.getElementById('startGame')
+let audio = document.getElementById('audioPlayback')
+let audioButton = document.getElementById('playAudio')
 let interval
 let frames = 0 
+let audioOn = false
 let arrObstaculosMoving = []
 const board = new Board()
 const playeruno = new PlayerUno()

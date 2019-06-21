@@ -39,14 +39,15 @@ class PlayerUno{
     }
     moveLeft(){
         this.x-=20
-        
+        if (this.x < 0) this.x = canvas.width - this.width
     }
     moveUp(){
         this.y-=15
-        
+        if (this.y < 0) this.y = canvas.height - this.height
     }
     moveDown(){
         this.y+=15
+        if (this.y > canvas.height - this.height) this.y = 0
     }
     draw(){
         
@@ -64,8 +65,8 @@ class PlayerDos{
     constructor(){
         this.x = 20
         this.y = 100
-        this.width = 175
-        this.height = 86
+        this.width = 87.5
+        this.height = 43
         this.img = new Image ()
         this.img.src = 'images/aircraft.png'
         this.img.onload = () =>{
@@ -78,15 +79,16 @@ class PlayerDos{
     }
     moveLeft(){
         this.x-=20
-        
+        if (this.x < 0) this.x = canvas.width - this.width
         
     }
     moveUp(){
         this.y-=15
-        
+        if (this.y < 0) this.y = canvas.height - this.height
     }
     moveDown(){
         this.y+=15
+        if (this.y > canvas.height - this.height) this.y = 0
     }
     draw(){
         

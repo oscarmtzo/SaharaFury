@@ -1,5 +1,5 @@
 window.onload = function (){
-    addEventListener("click", function(){
+    buttonStartGame.addEventListener("click", function(){
         startGame();
       })
 }
@@ -16,4 +16,5 @@ function update (){
 }
 function startGame(){
     if(!interval)interval = setInterval(update,1000/60)
+    
 }
