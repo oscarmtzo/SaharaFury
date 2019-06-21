@@ -31,6 +31,7 @@ addEventListener('keydown',(e) =>{
     case 32:
         clearInterval(interval)
         interval = 0
+        break;
     }
 })
 audioButton.addEventListener('click', function (){
@@ -38,3 +39,10 @@ audioButton.addEventListener('click', function (){
     else stopAudio()
     audioOn = !audioOn
 })
+
+addEventListener('keyup', event =>{
+    if(event.keyCode === 27){
+        location.reload(true)
+    }
+})
+
