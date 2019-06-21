@@ -37,8 +37,7 @@ body{
 }
 .logoBox{
     background-position-x: center;
-    /*display: flex;
-    justify-content: center;*/
+    
 }
 .buttonBox{
     display: flex;
@@ -52,7 +51,7 @@ body{
 button:focus{
     outline: none;
 }
-.playAudio{
+#playAudio{
     padding: 0;
     background: none;
 }
